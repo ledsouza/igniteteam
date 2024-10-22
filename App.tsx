@@ -9,14 +9,14 @@ import { ThemeProvider } from "styled-components/native";
 import theme from "./src/theme";
 
 import { Loading } from "@components/Loading";
-import { Groups } from "@screens/Groups";
+import { Routes } from "@routes/index";
 
 export default function App() {
     const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
     return (
         <ThemeProvider theme={theme}>
             <StatusBar style="light" translucent />
-            {fontsLoaded ? <Groups /> : <Loading />}
+            {fontsLoaded ? <Routes /> : <Loading />}
         </ThemeProvider>
     );
 }
